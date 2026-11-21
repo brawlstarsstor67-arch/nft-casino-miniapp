@@ -1,0 +1,101 @@
+:root {
+  --tg-theme-bg-color: #0b0b12;
+  --tg-theme-text-color: #ffffff;
+  --tg-theme-hint-color: #aaaaaa;
+  --tg-theme-button-color: #4da3ff;
+  --tg-theme-button-text-color: #ffffff;
+}
+
+body {
+  background: var(--tg-theme-bg-color, #0b0b12);
+  color: var(--tg-theme-text-color, #ffffff);
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+
+.tab {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: var(--tg-theme-text-color, #fff);
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab.active { background: var(--tg-theme-button-color, #4da3ff); color: var(--tg-theme-button-text-color, #fff); }
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.btn {
+  background: var(--tg-theme-button-color, #4da3ff);
+  color: var(--tg-theme-button-text-color, #fff);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+.btn.gray { background: rgba(255,255,255,0.1); color: var(--tg-theme-hint-color, #aaa); }
+.btn.red { background: #ff4d6d; color: #fff; }
+
+.ncard {
+  background: #2b3040;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.nc-emoji { font-size: 32px; line-height: 1; }
+.nc-name { font-weight: 600; }
+.nc-rar { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: var(--tg-theme-bg-color, #0b0b12);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 90%;
+  width: 100%;
+  text-align: center;
+}
+
+.dim { color: var(--tg-theme-hint-color, #aaa); }
+.gold-text { color: #ffc63a; font-weight: 700; }
+
+.sec-title { margin-top: 20px; margin-bottom: 12px; padding-left: 10px; border-left: 4px solid var(--tg-theme-button-color, #4da3ff); }
